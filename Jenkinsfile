@@ -9,12 +9,19 @@ pipeline {
     }
 
     stages {
+
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
         stage('Checkout') {
             steps {
                 // Checkout kode dari repository Git
                 git 'https://github.com/bintangbe/wedding.git'
             }
         }
+        
 
         stage('Build Docker Image') {
             steps {

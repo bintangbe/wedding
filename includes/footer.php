@@ -6,9 +6,6 @@
                     <h6>Tentang Kami</h6>
                     <ul>
                         <li><a href="page.php?type=aboutus">Tentang Kami</a></li>
-                        <li><a href="page.php?type=faqs">FAQs</a></li>
-                        <li><a href="page.php?type=privacy">Privacy</a></li>
-                        <li><a href="page.php?type=terms">Terms of use</a></li>
                     </ul>
                 </div>
             </div>

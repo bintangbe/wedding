@@ -115,7 +115,7 @@ return true;
             </div>
             <div class="form-group">
 			<label>Catatan</label>
-				<textarea class="form-control" name="catatan" placeholder="" required></textarea>
+				<textarea class="form-control" name="catatan" placeholder="" ></textarea>
             </div>
 			<br/>			
 			<div class="form-group">

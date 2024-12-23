@@ -3,8 +3,7 @@ include('includes/config.php');
 include('includes/format_rupiah.php');
 include('includes/library.php');
 $kode=$_GET['kode'];
-$sql1 	= "SELECT transaksi.*,member.*,paket.* FROM transaksi, member, paket WHERE transaksi.email=member.email
-		   AND transaksi.id_paket=paket.id_paket AND transaksi.id_trx='$kode'";
+$sql1 	= "SELECT transaksi.*,member.*,paket.* FROM transaksi, member, paket WHERE transaksi.id_paket=paket.id_paket AND transaksi.id_trx='$kode'";
 $query1 = mysqli_query($koneksidb,$sql1);
 $result = mysqli_fetch_array($query1);
 $harga	= $result['harga'];
@@ -58,14 +57,14 @@ $tglhasil = date("Y-m-d",$tgl);
 						<td rowspan="3" width="16%" class="text-center">
 							<img src="admin/img/newicon.jpeg" alt="logo-dkm" width="80" />
 						</td>
-						<td class="text-center"><h3>PT. DUA PUTRA ASURO</h3></td>
+						<td class="text-center"><h3>PT. BINTANG MAESTRO</h3></td>
 						<td rowspan="3" width="16%">&nbsp;</td>
 					</tr>
 					<tr>
-						<td class="text-center">Phone : 0711-5720-313 | E-mail : ptduaputraasuro28@gmail.com</td>
+						<td class="text-center">Phone : 0812-3456-7890 | E-mail : maestrobintang@gmail.com</td>
 					</tr>
 					<tr>
-						<td class="text-center">Palembang</td>
+						<td class="text-center">Sidoarjo</td>
 					</tr>
 				</tbody>
 			</table>

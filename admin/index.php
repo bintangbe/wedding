@@ -45,7 +45,7 @@ if(mysqli_num_rows($query)>0){
 				<div class="row">
 				<center><img class="mt-4x"src="img/logo.png" alt="logo" width="200" height="150"></center>
 					<div class="col-md-6 col-md-offset-3">
-					<h1 class="text-center text-bold mt-1x" style="color:black">PT. DUA PUTRA ASURO</h1><br>
+					<h1 class="text-center text-bold mt-1x" style="color:black">PT. BINTANG MAESTRO</h1><br>
 							<div class="col-md-8 col-md-offset-2">
 								<form method="post">
 									<label for="" style="color:black;" class="text-uppercase text-sm">Username </label>

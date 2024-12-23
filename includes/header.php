@@ -62,7 +62,6 @@ while($results = mysqli_fetch_array($query))
         <ul class="nav navbar-nav">
 		  <li><a href="index.php">Home</a></li>
           <li><a href="paket.php">Daftar Paket</a></li>
-          <li><a href="page.php?type=faqs">FAQs</a></li>
           <li><a href="page.php?type=aboutus">Tentang Kami</a></li>
         </ul>
       </div>

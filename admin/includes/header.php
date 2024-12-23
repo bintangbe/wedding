@@ -1,5 +1,5 @@
 <div class="brand clearfix">
-	<a href="dashboard.php" style="font-size: 30px; color:white;"><img src="img/logo.png" width="130px" height="80px"> PT. DUA PUTRA ASURO</a>  
+	<a href="dashboard.php" style="font-size: 30px; color:white;"><img src="img/logo.png" width="130px" height="80px"> PT.BINTANG MAESTRO</a>  
 		<span class="menu-btn"><i class="fa fa-bars"></i></span>
 		<ul class="ts-profile-nav">
             <?php

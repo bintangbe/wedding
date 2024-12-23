@@ -9,7 +9,7 @@ $chars = '12345abcdefg'; //Kombinasi huruf dan angka yang diacak
 $string = '';
 for ($i = 0; $i < $len; $i++) {
     $pos = rand(0, strlen($chars) - 1);
-    $string .= $chars{$pos};
+    $string .= $chars [$pos];
 }
 $_SESSION['kode_captcha'] = $string; //hasil acak disimpan dalam variabel session
 //menambahkan titik2 gambar / noise

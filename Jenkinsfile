@@ -12,7 +12,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout kode dari repository Git
-                git 'https://github.com/bintangbe/wedding}'
+                git 'https://github.com/bintangbe/wedding.git'
             }
         }
 

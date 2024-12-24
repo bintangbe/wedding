@@ -4,6 +4,12 @@ pipeline {
         DOCKER_IMAGE = 'my-docker-image'
     }
     stages {
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/your-repository/your-project.git'
+            }
+        }
+
         stage('Build') {
             steps {
                 script {
@@ -13,6 +19,19 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Tambahkan langkah pengujian di sini, misalnya:
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+            }
+        }
+    }
         stage('Notify Discord') {
             steps {
                 script {

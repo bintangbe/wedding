@@ -4,18 +4,17 @@ pipeline {
         DOCKER_IMAGE = 'my-docker-image'
     }
     stages {
+    
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/your-repository/your-project.git'
+                git 'https://github.com/bintangbe/wedding.git'
             }
         }
 
         stage('Build') {
             steps {
-                script {
-                    echo 'Building Docker image...'
-                // Proses build docker di sini
-                }
+                echo 'Building the project...'
+                // Tambahkan langkah build Anda di sini, misalnya:
             }
         }
 
@@ -31,17 +30,19 @@ pipeline {
                 echo 'Deploying the application...'
             }
         }
-    }
+
+
+
         stage('Notify Discord') {
             steps {
                 script {
                     def message = [
-                        'content': 'Pipeline berhasil',
-                        'embeds': [
+                        "content": "Pipeline berhasil",
+                        "embeds": [
                             [
-                                'title': 'docker build dan push',
-                                'description': "Image ${DOCKER_IMAGE} berhasil di push",
-                                'color': 3066993
+                                "title": "docker build dan push",
+                                "description": "Image ${DOCKER_IMAGE} berhasil di push",
+                                "color": 3066993
                             ]
                         ]
                     ]
@@ -51,7 +52,7 @@ pipeline {
                         acceptType: 'APPLICATION_JSON',
                         contentType: 'APPLICATION_JSON',
                         requestBody: groovy.json.JsonOutput.toJson(message),
-                        url: 'https://discord.com/api/webhooks/1320970738102173768/kUePVv4-WPKPNAunAKzKfLRs75bO8paz2P4-dBfaFG9DSGE6lCPzdJKIdMJcD_uTw-XZ'
+                        url: 'https://discordapp.com/api/webhooks/1320956958429417544/u7p-SDi064-7lnW7xB_xkqwYXfbim9HNXDvC6gxBYN7oOjFm9k8h-9qUl5SroklsSKp2'
                     )
                 }
             }
@@ -61,12 +62,12 @@ pipeline {
         failure {
             script {
                 def message = [
-                    'content': 'Pipeline gagal',
-                    'embeds': [
+                    "content": "Pipeline gagal",
+                    "embeds": [
                         [
-                            'title': 'Pipeline gagal',
-                            'description': 'Terdapat kesalahan',
-                            'color': 15158332
+                            "title": "Pipeline gagal",
+                            "description": "Terdapat kesalahan",
+                            "color": 15158332
                         ]
                     ]
                 ]
@@ -76,7 +77,7 @@ pipeline {
                     acceptType: 'APPLICATION_JSON',
                     contentType: 'APPLICATION_JSON',
                     requestBody: groovy.json.JsonOutput.toJson(message),
-                    url: 'https://discord.com/api/webhooks/1320970738102173768/kUePVv4-WPKPNAunAKzKfLRs75bO8paz2P4-dBfaFG9DSGE6lCPzdJKIdMJcD_uTw-XZ'
+                    url: 'https://discordapp.com/api/webhooks/1320956958429417544/u7p-SDi064-7lnW7xB_xkqwYXfbim9HNXDvC6gxBYN7oOjFm9k8h-9qUl5SroklsSKp2'
                 )
             }
         }

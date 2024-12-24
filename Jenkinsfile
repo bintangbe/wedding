@@ -7,7 +7,7 @@ pipeline {
     
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/bintangbe/wedding.git'
+                echo 'Checkout the Code...'
             }
         }
 

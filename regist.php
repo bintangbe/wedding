@@ -72,7 +72,7 @@ include('includes/config.php');
 			<div class="user_profile_info">
 				<h6 align="center">Registrasi Member</h6>
 				<div class="col-md-12 col-sm-10">
-					<form method="post" name="theform" action="registact.php" id="theform" onSubmit="return checkLetter(this);" enctype="multipart/form-data">
+					<form method="POST" name="theform" action="registact.php" id="theform" onSubmit="return checkLetter(this);" enctype="multipart/form-data">
 						<div class="form-group">
 							<input type="text" class="form-control" name="fullname" placeholder="Nama Lengkap" required="required">
 						</div>

@@ -2,12 +2,19 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = 'my-docker-image'
+        GITHUB_CREDENTIALS = credentials('bintangbe') // Sesuaikan dengan ID credential GitHub Anda
+        GITHUB_REPO = 'https://github.com/bintangbe/wedding.git' // Ganti dengan URL repo GitHub Anda
+        BRANCH_NAME = 'main' // Ganti dengan nama branch Anda
+    }
     }
     stages {
     
         stage('Checkout Code') {
             steps {
                 echo 'Checkout the Code...'
+                git branch: "${BRANCH_NAME}",
+                    url: "${GITHUB_REPO}",
+                    credentialsId: 'bintangbe'
             }
         }
 

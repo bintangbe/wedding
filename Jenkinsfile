@@ -6,7 +6,7 @@ pipeline {
         GITHUB_REPO = 'https://github.com/bintangbe/wedding.git' // Ganti dengan URL repo GitHub Anda
         BRANCH_NAME = 'main' // Ganti dengan nama branch Anda
     }
-    }
+
     stages {
     
         stage('Checkout Code') {
@@ -89,3 +89,4 @@ pipeline {
             }
         }
     }
+}

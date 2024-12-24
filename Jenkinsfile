@@ -14,26 +14,7 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                echo 'Building the project...'
-                // Tambahkan langkah build Anda di sini, misalnya:
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-                // Tambahkan langkah pengujian di sini, misalnya:
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the application...'
-            }
-        }
-
+       
 
 
         stage('Notify Discord') {
